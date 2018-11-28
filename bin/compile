@@ -1,0 +1,13 @@
+#!/bin/sh
+
+set -e
+
+BIN_DIR=$(cd $(dirname $0); pwd)
+BUILDPACK_DIR=$(dirname $BIN_DIR)
+SATYSFI_DIR="$BUILDPACK_DIR/SATySFi-0.0.3"
+
+echo "-----> Installing SATySFi v0.0.3"
+cp "$SATYSFI_DIR/bin/satysfi" /usr/local/bin/satysfi
+cp "$SATYSFI_DIR/doc/satysfi" /usr/local/doc/satysfi
+cp "$SATYSFI_DIR/lib/satysfi" /usr/local/lib/satysfi
+cp "$SATYSFI_DIR/share/satysfi" /usr/local/share/satysfi
