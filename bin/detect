@@ -1,3 +1,10 @@
 #!/bin/sh
 
+set -e
+
+if [ $STACK != "heroku-18" ]; then
+  echo $STACK is not supported.
+  exit 1
+fi
+
 echo "SATySFi v0.0.3"
